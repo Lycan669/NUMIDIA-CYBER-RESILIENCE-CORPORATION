@@ -1,0 +1,50 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+.venv
+pip-log.txt
+pip-delete-this-directory.txt
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-project
+*.sublime-workspace
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Sensitive Data
+*.key
+*.pem
+*.pwd
+secrets.txt
+credentials.json
+config.local.json
+.env
+.env.local
+
+# Logs
+*.log
+logs/
+*.txt.log
+
+# Temp
+temp/
+tmp/
+cache/
+*.tmp
+
+# SIEM Data
+*.csv
+*.tsv
+export/
