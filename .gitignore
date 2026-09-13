@@ -1,4 +1,12 @@
-# Python
+# ╔═══════════════════════════════════════════════════════════════════════════╗
+# ║                  NUMIDIA CYBER RESILIENCE CORPORATION                     ║
+# ║                         COMPREHENSIVE .gitignore                          ║
+# ║                    Security-First Portfolio Protection                    ║
+# ╚═══════════════════════════════════════════════════════════════════════════╝
+
+# ════════════════════════════════════════════════════════════════════════════
+# 1. PYTHON - DEPENDENCIES & BUILD
+# ════════════════════════════════════════════════════════════════════════════
 __pycache__/
 *.py[cod]
 *$py.class
@@ -6,45 +14,623 @@ __pycache__/
 .Python
 env/
 venv/
-.venv
+ENV/
+env.bak/
+venv.bak/
 pip-log.txt
 pip-delete-this-directory.txt
+*.egg-info/
+.eggs/
+*.egg
+*.whl
+dist/
+build/
+*.egg-info
+develop-eggs/
+downloads/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.pyc
+.installed.cfg
+*.egg
+MANIFEST
 
-# IDE
+# ════════════════════════════════════════════════════════════════════════════
+# 2. NODEJS - DEPENDENCIES & BUILD
+# ════════════════════════════════════════════════════════════════════════════
+node_modules/
+package-lock.json
+yarn.lock
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.npm
+.eslintcache
+.node_repl_history
+*.tsbuildinfo
+.yarn/cache
+.yarn/unplugged
+.yarn/build-state.yml
+.yarn/install-state.gz
+.pnp.*
+
+# ════════════════════════════════════════════════════════════════════════════
+# 3. IDE & EDITORS
+# ════════════════════════════════════════════════════════════════════════════
 .vscode/
 .idea/
 *.swp
 *.swo
 *.sublime-project
 *.sublime-workspace
+*.iml
+.netbeans/
+nbproject/
+*.sublime-settings
+*.project
+.classpath
+.c9/
+*.jmx
+*.launch
+.settings/
+*.sublime-workspace
+.emacs.desktop
+.emacs.desktop.lock
+*~
+.flymake.*
+.tern-port
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+.vs/
+.vscode-test
+.history
+.ionide
 
-# OS
+# ════════════════════════════════════════════════════════════════════════════
+# 4. OPERATING SYSTEMS
+# ════════════════════════════════════════════════════════════════════════════
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+*.swp
+*~.nib
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+.Spotlight-V100
+.Trashes
+
+# Windows
 Thumbs.db
 Desktop.ini
+ehthumbs.db
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msapp
+*.lnk
 
-# Sensitive Data
+# Linux
+*~
+.directory
+.Trash-*
+
+# ════════════════════════════════════════════════════════════════════════════
+# 5. CRITICAL SECURITY - SECRETS & CREDENTIALS 🔴
+# ════════════════════════════════════════════════════════════════════════════
+
+# Environment Variables
+.env
+.env.local
+.env.*.local
+.env.production.local
+.env.development.local
+.env.test.local
+.env.example (note: .example est OK à commiter)
+env.ini
+env.conf
+
+# Password & API Keys
 *.key
 *.pem
 *.pwd
+*.password
 secrets.txt
-credentials.json
-config.local.json
-.env
-.env.local
+secrets.json
+secrets.yml
+secrets.yaml
+api_keys.json
+api_keys.txt
+api_keys.yml
+tokens.json
+tokens.txt
+refresh_tokens.json
+oauth_tokens.json
+*.token
+.tokens/
+token_*
+private_key*
+secret_key*
 
-# Logs
+# Certificates & SSL
+*.crt
+*.cert
+*.pfx
+*.p12
+*.p7b
+*.jks
+*.keystore
+*.truststore
+ssl/
+certificates/
+certs/
+keys/
+.ssl/
+.certs/
+.keys/
+
+# Cloud Credentials
+.aws/
+.aws/*
+.azure/
+.azure/*
+.gcp/
+.gcp/*
+aws_credentials.json
+aws_credentials.txt
+aws_access_key_id
+aws_secret_access_key
+azure_credentials.json
+azure_connection_string.txt
+azure_subscription_id
+gcp_credentials.json
+gcp_service_account.json
+gcp_project_id
+.google/
+google_credentials.json
+
+# Database Credentials
+db_credentials.json
+db_credentials.txt
+database.yml
+database.yaml
+pgpass
+pgpass.conf
+mongo_credentials.json
+mongodb_connection.txt
+redis_password.txt
+mysql_password.txt
+postgres_password.txt
+sqlserver_password.txt
+
+# SSH Keys & Auth
+id_rsa
+id_rsa.pub
+id_dsa
+id_dsa.pub
+id_ecdsa
+id_ecdsa.pub
+id_ed25519
+id_ed25519.pub
+known_hosts
+authorized_keys
+.ssh/
+ssh_config
+ssh_key_*
+
+# Git Credentials
+.git-credentials
+.gitcredentials
+git_credentials.txt
+
+# NPM/Node Auth
+.npmrc
+.yarnrc
+.yarnrc.yml
+
+# Python Auth
+.pypirc
+.python-credentials
+
+# Docker Secrets
+secrets.txt
+docker-compose.override.yml
+.docker/
+Dockerfile.local
+docker-compose.local.yml
+docker-secrets/
+
+# ════════════════════════════════════════════════════════════════════════════
+# 6. SIEM & SECURITY OPERATIONS
+# ════════════════════════════════════════════════════════════════════════════
+
+# Splunk
+.splunk/
+splunk_auth.conf
+splunk_password.conf
+splunk_credentials.conf
+*.spl.local
+indexes/
+splunk_config.ini
+splunk_auth.txt
+
+# Sentinel & Azure
+sentinel_config.json
+sentinel_auth.json
+sentinel_connection_string.txt
+azure_sentinel_config.yml
+.sentinel/
+
+# SIEM Data Files
+*.csv (considérer si les données sont sensibles)
+*.tsv
+*.xlsx
+*.xls
+export/
+exports/
+siem_exports/
+siem_data/
+raw_logs/
+log_exports/
+event_exports/
+
+# Threat Intelligence
+indicators.json
+indicators.csv
+iocs.json
+iocs.csv
+threat_data.json
+threat_intel/
+
+# ════════════════════════════════════════════════════════════════════════════
+# 7. DATABASE FILES (Sensible Data)
+# ════════════════════════════════════════════════════════════════════════════
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite-journal
+*.dbm
+*.rdb
+*.mdb
+*.accdb
+*.ldf
+*.bak.db
+pgpass
+mongo_data/
+mysql_data/
+postgres_data/
+redis_data/
+*.sql (optionnel - si contient des données)
+dump.sql
+backup.sql
+database_dump/
+
+# ════════════════════════════════════════════════════════════════════════════
+# 8. LOGS & AUDIT TRAILS
+# ════════════════════════════════════════════════════════════════════════════
 *.log
+*.log.*
 logs/
+log/
+audit/
+audit_logs/
+security_logs/
+access_logs/
+error_logs/
+debug_logs/
+trace_logs/
+syslog
 *.txt.log
+nohup.out
+pip-log.txt
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+lerna-debug.log*
+.pnpm-debug.log*
 
-# Temp
+# ════════════════════════════════════════════════════════════════════════════
+# 9. NETWORK & FORENSICS ARTIFACTS (Sensible)
+# ════════════════════════════════════════════════════════════════════════════
+*.pcap
+*.pcapng
+*.cap
+*.dmp
+*.dump
+*.mem
+pcap_files/
+pcap_data/
+memory_dumps/
+network_captures/
+forensics_artifacts/
+artifacts/
+volatile_data/
+heap_dumps/
+core_dumps/
+crash_dumps/
+
+# ════════════════════════════════════════════════════════════════════════════
+# 10. TEMPORARY & BUILD FILES
+# ════════════════════════════════════════════════════════════════════════════
 temp/
 tmp/
 cache/
 *.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*~
+*.swp
+*.swo
+.cache/
+.tmp/
+.temp/
+dist/
+build/
+.next/
+out/
+*.o
+*.a
+*.lib
+*.obj
 
-# SIEM Data
-*.csv
-*.tsv
-export/
+# ════════════════════════════════════════════════════════════════════════════
+# 11. DOCKER & CONTAINERIZATION
+# ════════════════════════════════════════════════════════════════════════════
+.dockerignore
+.docker/
+docker-compose.override.yml
+docker-compose.local.yml
+Dockerfile.local
+Dockerfile.dev
+.env.docker
+docker-secrets/
+docker_creds/
+docker.env
+
+# ════════════════════════════════════════════════════════════════════════════
+# 12. TESTING & COVERAGE
+# ════════════════════════════════════════════════════════════════════════════
+.coverage
+.coverage.*
+htmlcov/
+.pytest_cache/
+.tox/
+.hypothesis/
+pytest.ini
+.nox/
+coverage.xml
+*.cover
+*.py,cover
+.nose*
+*.cover
+.unit-test-results/
+test-results/
+junit.xml
+.xunit-results/
+
+# ════════════════════════════════════════════════════════════════════════════
+# 13. JUPYTER & NOTEBOOKS
+# ════════════════════════════════════════════════════════════════════════════
+.ipynb_checkpoints/
+*.ipynb
+*.ipynb_checkpoints
+.jupyterlab-settings/
+.jupyter/
+jupyter_notebook_config.json
+.ipython/
+
+# ════════════════════════════════════════════════════════════════════════════
+# 14. PACKAGE MANAGERS & LOCKS
+# ════════════════════════════════════════════════════════════════════════════
+poetry.lock
+Pipfile.lock
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+composer.lock
+Gemfile.lock
+.bundle/
+vendor/
+
+# ════════════════════════════════════════════════════════════════════════════
+# 15. BUILD & STATIC FILES
+# ════════════════════════════════════════════════════════════════════════════
+# Jekyll
+.jekyll-cache/
+.jekyll-metadata
+_site/
+.jekyll-build/
+
+# Hugo
+resources/_gen/
+assets/jsconfig.json
+public/
+
+# Next.js
+.next/
+out/
+.nuxt
+dist/
+.cache/
+.vuepress/dist
+.serverless/
+.fusebox/
+.dynamodb/
+.tern-port
+.cache-loader
+.env.*.local
+
+# ════════════════════════════════════════════════════════════════════════════
+# 16. IDE WORKSPACES
+# ════════════════════════════════════════════════════════════════════════════
+*.code-workspace
+.vscode/launch.json
+.vscode/settings.json (optionnel - si personnel)
+.vscode/extensions.json
+.vscode/tasks.json
+.vscode/c_cpp_properties.json
+.fleet/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/shelf
+.idea/modules.xml
+.idea/misc.xml
+
+# ════════════════════════════════════════════════════════════════════════════
+# 17. GIT INTERNALS
+# ════════════════════════════════════════════════════════════════════════════
+.git/
+.gitkeep
+.gitmodules (optionnel)
+.git/hooks/
+.git/config
+.git/credentials
+.git/info/
+.gitattributes (optionnel)
+
+# ════════════════════════════════════════════════════════════════════════════
+# 18. CI/CD ARTIFACTS
+# ════════════════════════════════════════════════════════════════════════════
+.github/workflows/secrets.yml
+.gitlab-ci.local.yml
+.travis.yml.local
+.circleci/config.local.yml
+Jenkinsfile.local
+ci-secrets.txt
+build-artifacts/
+deployment-logs/
+
+# ════════════════════════════════════════════════════════════════════════════
+# 19. MACOS SPECIFIC
+# ════════════════════════════════════════════════════════════════════════════
+.AppleDouble
+.LSOverride
+*.swp
+*~.nib
+.com.apple.timemachine.donotpresent
+.AppleDB
+.AppleDesktop
+Network Trash Folder
+Temporary Items
+.apdisk
+.Spotlight-V100
+.Trashes
+._*
+.DS_Store
+
+# ════════════════════════════════════════════════════════════════════════════
+# 20. WINDOWS SPECIFIC
+# ════════════════════════════════════════════════════════════════════════════
+[Dd]esktop.ini
+[Dd]esktopbk
+$RECYCLE.BIN/
+ehthumbs.db
+Thumbs.db
+*.stackdump
+*.lnk
+*.exe
+*.dll
+*.so
+*.dylib
+
+# ════════════════════════════════════════════════════════════════════════════
+# 21. BACKUP & ARCHIVE FILES
+# ════════════════════════════════════════════════════════════════════════════
+*.bak
+*.backup
+*.old
+*.orig
+*.tmp
+*.swp
+*.swo
+*~
+*.7z
+*.rar
+*.zip
+*.gz
+*.tar
+*.tar.gz
+*.tgz
+
+# ════════════════════════════════════════════════════════════════════════════
+# 22. COMPILED & BINARY FILES
+# ════════════════════════════════════════════════════════════════════════════
+*.bin
+*.exe
+*.dll
+*.so
+*.dylib
+*.o
+*.a
+*.lib
+*.obj
+*.class
+*.jar
+*.war
+*.ear
+
+# ════════════════════════════════════════════════════════════════════════════
+# 23. CONFIGURATION OVERRIDES
+# ════════════════════════════════════════════════════════════════════════════
+config.local.json
+config.local.yml
+config.local.yaml
+settings.local.json
+*.local.json
+*.local.yml
+*.local.yaml
+.env.local.*
+.config.local
+
+# ════════════════════════════════════════════════════════════════════════════
+# 24. MISCELLANEOUS SENSITIVE FILES
+# ════════════════════════════════════════════════════════════════════════════
+.pair
+.ssl/
+.certs/
+.keys/
+.secrets/
+.private/
+private/
+secrets/
+credentials/
+auth/
+.auth/
+sensitive/
+confidential/
+
+# ════════════════════════════════════════════════════════════════════════════
+# 25. EXCEPTIONS - FILES TO TRACK (Use ! prefix)
+# ════════════════════════════════════════════════════════════════════════════
+!.gitkeep
+!.gitignore
+!.env.example
+!.env.example.json
+!config.example.json
+!config.example.yml
+!secrets.example.json
+!docker-compose.example.yml
+!Dockerfile.example
+!.editorconfig
+!README.md
+!LICENSE
+
+# ════════════════════════════════════════════════════════════════════════════
+# END OF GITIGNORE - Security First! 🔒
+# ════════════════════════════════════════════════════════════════════════════
