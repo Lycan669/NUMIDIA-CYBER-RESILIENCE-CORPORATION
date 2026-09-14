@@ -1,0 +1,93 @@
+# PowerShell
+@"
+# ╔═══════════════════════════════════════════════════════════════════════════╗
+# ║                  NUMIDIA CYBER RESILIENCE CORPORATION                     ║
+# ║                       Jekyll Configuration (GitHub Pages)                 ║
+# ║                         Security-First Settings                           ║
+# ╚═══════════════════════════════════════════════════════════════════════════╝
+
+# ════════════════════════════════════════════════════════════════════════════
+# JEKYLL & SITE CONFIGURATION
+# ════════════════════════════════════════════════════════════════════════════
+title: "NUMIDIA Cyber Resilience Corporation"
+description: "Blue Team Portfolio - SOC Analyst | Incident Response | Threat Hunting"
+url: "https://lycan669.github.io"
+baseurl: "/NUMIDIA-CYBER-RESILIENCE-CORPORATION"
+
+# ════════════════════════════════════════════════════════════════════════════
+# THEME & LAYOUT
+# ════════════════════════════════════════════════════════════════════════════
+theme: jekyll-theme-minimal
+logo: /assets/logo.png
+show_downloads: false
+
+# ════════════════════════════════════════════════════════════════════════════
+# SECURITY HEADERS (Meta Tags - GitHub Pages Limitation)
+# ════════════════════════════════════════════════════════════════════════════
+# NOTE: GitHub Pages a des limitations sur les vrais HTTP headers
+# On utilise des meta tags comme fallback
+
+# ════════════════════════════════════════════════════════════════════════════
+# BUILD & PLUGINS
+# ════════════════════════════════════════════════════════════════════════════
+markdown: kramdown
+kramdown:
+  syntax_highlighter: rouge
+  syntax_highlighter_opts:
+    css_class: highlight
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-feed
+
+# ════════════════════════════════════════════════════════════════════════════
+# COLLECTIONS & DATA
+# ════════════════════════════════════════════════════════════════════════════
+collections:
+  event-ids:
+    output: true
+    permalink: /event-ids/:path/
+
+# ════════════════════════════════════════════════════════════════════════════
+# BUILD OPTIONS
+# ════════════════════════════════════════════════════════════════════════════
+exclude:
+  - .github/
+  - node_modules/
+  - venv/
+  - env/
+  - .env
+  - .env.local
+  - .gitignore
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - CHANGELOG.md
+  - LICENSE
+
+keep_files:
+  - assets
+
+# ════════════════════════════════════════════════════════════════════════════
+# SITE METADATA
+# ════════════════════════════════════════════════════════════════════════════
+author:
+  name: "FreEA"
+  email: "contact@numidia-crc.local"
+  twitter: "@numidia_crc"
+  github: "lycan669"
+
+social:
+  name: NUMIDIA Cyber Resilience Corporation
+  links:
+    - https://github.com/lycan669/NUMIDIA-CYBER-RESILIENCE-CORPORATION
+
+# ════════════════════════════════════════════════════════════════════════════
+# JEKYLL ENVIRONMENT
+# ════════════════════════════════════════════════════════════════════════════
+environment: production
+
+# END OF CONFIG - Security First! 🔒
+"@ | Set-Content -Path _config.yml -Encoding UTF8
+
+Write-Host "✅ _config.yml créé avec succès !" -ForegroundColor Green
