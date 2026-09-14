@@ -1,0 +1,14 @@
+# Security files
+SECURITY.md @Lycan669
+*.key @Lycan669
+*.pem @Lycan669
+
+# Documentation
+*.md @Lycan669
+
+# Python
+*.py @Lycan669
+
+# Scripts
+*.ps1 @Lycan669
+*.sh @Lycan669   
